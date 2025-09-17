@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
     private float fixTimeMovement = 0.25f;
     private Vector2 falling;
     private GameObject[] groundLayer;
-    private BoxCollider2D collider;
 
     void Start()
     {
@@ -18,15 +17,12 @@ public class Player : MonoBehaviour
         moveDelta = Vector2.zero;
         falling = new Vector2(0, -1);
 
-        for (int i = 0; i < groundLayer.Length; i++)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+
+        if (hit)
         {
-            Debug.Log(transform.position + " " + groundLayer[i].transform.position);
-            if (transform.position.Equals(groundLayer[i].transform.position))
-            {
-                Debug.Log("Dzia³a!");
-                falling = Vector2.zero;
-                break;
-            }
+            float distance = Mathf.Abs(hit.point.y - transform.position.y);
+            Debug.Log(distance);
         }
 
         float x = Input.GetAxisRaw("Horizontal");
