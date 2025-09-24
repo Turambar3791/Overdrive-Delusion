@@ -21,8 +21,8 @@ public class Player : MonoBehaviour
         moveDelta = new Vector2(x, 0);
         transform.Translate(moveDelta * fixTimeMovement);
 
-        Debug.Log(groundCheckColl.IsTouchingLayers(LayerMask.GetMask("Ground")));
-        if (Input.GetKeyDown(KeyCode.C))
+        Debug.Log(IsGrounded());
+        if (Input.GetKeyDown(KeyCode.UpArrow) && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHight);
         }
@@ -30,8 +30,7 @@ public class Player : MonoBehaviour
     }
 
     private bool IsGrounded()
-    {
-        var test = groundCheckColl.gameObject.CompareTag("Ground");
-        return test;
+    { 
+        return groundCheckColl.IsTouchingLayers(LayerMask.GetMask("Ground"));
     }
 }
