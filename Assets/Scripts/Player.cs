@@ -50,6 +50,13 @@ public class Player : MonoBehaviour
             rb.gravityScale = 10;
         }
 
+        // wallJump
+        if (IsTouchingWallOnTheLeft() && Input.GetKeyDown(KeyCode.C))
+        {
+            rb.gravityScale = 10;
+            rb.linearVelocity = new Vector2(5 - rb.linearVelocity.x, jumpHight);
+        }
+
     }
 
     private bool IsGrounded()
