@@ -283,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 354637589}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0027, y: -0.4888, z: 0}
+  m_LocalPosition: {x: 0.0027, y: -0.476, z: 0}
   m_LocalScale: {x: 0.9715, y: 0.1625588, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -383,7 +383,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.46990362, g: 0.6132076, b: 0.45990568, a: 1}
+  m_Color: {r: 0.46990362, g: 0.6132076, b: 0.45990568, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 1548954009}
   - component: {fileID: 1548954011}
   - component: {fileID: 1548954010}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: WallCheckLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,8 +641,8 @@ Transform:
   m_GameObject: {fileID: 1548954008}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.494, y: 0.0019, z: 0}
-  m_LocalScale: {x: 0.07276535, y: 0.9506751, z: 1}
+  m_LocalPosition: {x: -0.3102, y: 0.0019, z: 0}
+  m_LocalScale: {x: 0.46836683, y: 0.9506751, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1672222593}
@@ -741,7 +741,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.46990362, g: 0.6132076, b: 0.45990568, a: 1}
+  m_Color: {r: 0.46990362, g: 0.6132076, b: 0.45990568, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 1552753217}
   - component: {fileID: 1552753216}
   - component: {fileID: 1552753215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +882,7 @@ Transform:
   m_GameObject: {fileID: 1552753214}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.18, y: -0.09, z: 0}
+  m_LocalPosition: {x: -4.92, y: 1.07, z: 0}
   m_LocalScale: {x: 1, y: 4.6469, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1247,7 +1247,7 @@ GameObject:
   - component: {fileID: 1743035360}
   - component: {fileID: 1743035362}
   - component: {fileID: 1743035361}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: WallCheckRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1263,8 +1263,8 @@ Transform:
   m_GameObject: {fileID: 1743035359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.0019, z: 0}
-  m_LocalScale: {x: 0.07276535, y: 0.9506751, z: 1}
+  m_LocalPosition: {x: 0.3038, y: 0.0019, z: 0}
+  m_LocalScale: {x: 0.47445363, y: 0.9506751, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1672222593}
@@ -1363,7 +1363,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.46990362, g: 0.6132076, b: 0.45990568, a: 1}
+  m_Color: {r: 0.4666667, g: 0.6117647, b: 0.45882356, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
