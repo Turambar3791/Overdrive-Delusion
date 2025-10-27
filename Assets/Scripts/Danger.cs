@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Danger : MonoBehaviour
 {
-    [SerializeField] private int sceneToLoadAnew;
+    [SerializeField] private string sceneToLoadAnew;
     private BoxCollider2D boxCollider;
 
     void Start()
@@ -15,7 +15,7 @@ public class Danger : MonoBehaviour
     {
         if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(sceneToLoadAnew);
         }
     }
 }

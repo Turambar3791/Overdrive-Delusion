@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Transition : MonoBehaviour
 {
-    [SerializeField] private int sceneNumber;
+    [SerializeField] private string interactWith;
+    [SerializeField] private string sceneName;
     private BoxCollider2D boxCollider;
 
     private void Start()
@@ -11,11 +12,19 @@ public class Transition : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow) && boxCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
-        { 
-            SceneManager.LoadScene(sceneNumber);
+        {
+            if (interactWith == "door")
+            {
+                SceneManager.LoadScene(sceneName);
+            }
+            else if (interactWith == "npc")
+            {
+                
+            }           
+
         }
     }
 }
