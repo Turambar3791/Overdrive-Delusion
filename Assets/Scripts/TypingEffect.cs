@@ -11,7 +11,7 @@ public class TypingEffect : MonoBehaviour
     [SerializeField] private GameObject dialogueBox;
     public bool isTextShowingFinished = false;
 
-    void Start()
+    void OnEnable()
     {
         fullText = GetComponent<TextMesh>().text;
         fullTextTab = fullText.Split(".");
