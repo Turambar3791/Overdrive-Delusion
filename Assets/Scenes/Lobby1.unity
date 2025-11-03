@@ -161,7 +161,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21286230}
-  m_Text: "You've completed \nthe first area.\nI think you gonna die."
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 0.3
   m_LineSpacing: 1
@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   delay: 0.1
+  fileWithFullText: {fileID: 4900000, guid: edda4b87b13810341b75c988bef355e6, type: 3}
   dialogueBox: {fileID: 21286230}
   isTextShowingFinished: 0
 --- !u!1 &226580374

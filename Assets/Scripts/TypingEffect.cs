@@ -1,10 +1,10 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TypingEffect : MonoBehaviour
 {
     [SerializeField] private float delay = 0.1f;
+    [SerializeField] private TextAsset fileWithFullText;
     private string fullText;
     private string[] fullTextTab;
     private string currentText = "";
@@ -13,8 +13,8 @@ public class TypingEffect : MonoBehaviour
 
     void OnEnable()
     {
-        fullText = GetComponent<TextMesh>().text;
-        fullTextTab = fullText.Split(".");
+        fullText = fileWithFullText.ToString();
+        fullTextTab = fullText.Split("]");
         StartCoroutine(ShowText());
     }
 
