@@ -3,14 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    // MainMenu
     public void NewGame()
     {
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene("Lobby");
     }
 
     public void LoadGame()
     {
-        //SceneManager.LoadScene();
+        SceneManager.LoadScene("MenuLoadGame");
     }
 
     public void Keybinds()
@@ -22,5 +23,12 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    // SubScenes
+
+    public void Back()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
