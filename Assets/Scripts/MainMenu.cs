@@ -4,30 +4,30 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // MainMenu
-    public void NewGame()
+    public void BtnNewGame()
     {
         SceneManager.LoadScene("Lobby");
     }
 
-    public void LoadGame()
+    public void BtnLoadGame()
     {
         SceneManager.LoadScene("MenuLoadGame");
     }
 
-    public void Keybinds()
+    public void BtnKeybinds()
     {
         SceneManager.LoadScene("MenuKeybinds");
     }
 
 
-    public void Quit()
+    public void BtnQuit()
     {
         Application.Quit();
     }
 
     // SubScenes
 
-    public void Back()
+    public void BtnBack()
     {
         SceneManager.LoadScene("MainMenu");
     }
