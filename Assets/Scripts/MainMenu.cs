@@ -28,9 +28,13 @@ public class MainMenu : MonoBehaviour
     }
 
     // SubScenes
-
     public void BtnBack()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void BtnResume()
+    {
+        
     }
 }

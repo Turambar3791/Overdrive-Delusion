@@ -40,6 +40,7 @@ public class Interaction : MonoBehaviour
                             SaveLoadSystem.Instance.data.is3rdLevelCompleted = true;
                             break;
                     }
+                    SaveLoadSystem.Instance.SaveGame();
                 }
                 SceneManager.LoadScene(sceneName);
             }

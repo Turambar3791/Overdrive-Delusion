@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
         wallCheckRightColl = wallCheckRight.GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         pauseScreen.enabled = false;
+        Time.timeScale = 1;
     }
 
     private void Update()
