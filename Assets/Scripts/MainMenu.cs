@@ -12,7 +12,8 @@ public class MainMenu : MonoBehaviour
 
     public void BtnLoadGame()
     {
-        SceneManager.LoadScene("MenuLoadGame");
+        SaveLoadSystem.Instance.LoadGame();
+        SceneManager.LoadScene("Lobby");
     }
 
     public void BtnKeybinds()

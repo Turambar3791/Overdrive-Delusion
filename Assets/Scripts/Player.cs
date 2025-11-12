@@ -45,7 +45,10 @@ public class Player : MonoBehaviour
     private float dashCooldownCounter;
 
     // pauzowanie
+    [Header("Pauzowanie")]
     private bool isPaused = false;
+    [SerializeField] private Canvas pauseScreen;
+
 
     private void Start()
     {
@@ -54,6 +57,7 @@ public class Player : MonoBehaviour
         wallCheckLeftColl = wallCheckLeft.GetComponent<BoxCollider2D>();
         wallCheckRightColl = wallCheckRight.GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
+        pauseScreen.enabled = false;
     }
 
     private void Update()
@@ -64,11 +68,13 @@ public class Player : MonoBehaviour
             if (!isPaused)
             {
                 Time.timeScale = 0;
+                pauseScreen.enabled = true;
                 isPaused = true;
             }
             else
             {
                 Time.timeScale = 1;
+                pauseScreen.enabled = false;
                 isPaused = false;
             }
         }
