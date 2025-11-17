@@ -68,15 +68,11 @@ public class Player : MonoBehaviour
         {
             if (!isPaused)
             {
-                Time.timeScale = 0;
-                pauseScreen.enabled = true;
-                isPaused = true;
+                Pause();
             }
             else
             {
-                Time.timeScale = 1;
-                pauseScreen.enabled = false;
-                isPaused = false;
+                UnPause();
             }
         }
 
@@ -215,5 +211,19 @@ public class Player : MonoBehaviour
     { 
         sprite.flipX = isFacingRight;
         isFacingRight = !isFacingRight;
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        pauseScreen.enabled = true;
+        isPaused = true;
+    }
+
+    public void UnPause()
+    {
+        Time.timeScale = 1;
+        pauseScreen.enabled = false;
+        isPaused = false;
     }
 }

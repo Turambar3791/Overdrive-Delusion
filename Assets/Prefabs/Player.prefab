@@ -121,9 +121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6757460679799168955}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: BtnResume
+      - m_Target: {fileID: 3855443934458528746}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: UnPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6757460679799168955}
+      - m_Target: {fileID: 2834478864490688238}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: BtnBack
         m_Mode: 1
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 1912806439679674739}
   - component: {fileID: 3855443934458528746}
   - component: {fileID: 1415079255551797315}
-  - component: {fileID: 6757460679799168955}
+  - component: {fileID: 2834478864490688238}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1383,7 +1383,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6757460679799168955
+--- !u!114 &2834478864490688238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
