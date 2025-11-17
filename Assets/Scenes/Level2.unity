@@ -492,6 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619152285}
   - component: {fileID: 619152286}
+  - component: {fileID: 619152287}
   m_Layer: 10
   m_Name: ThridTrigger
   m_TagString: Untagged
@@ -560,6 +561,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8215694, y: 0.80581117}
   m_EdgeRadius: 0
+--- !u!114 &619152287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619152284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f666ddcaa404e0948a9f0d263210bb6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  platformToMove: {fileID: 1381012335}
+  x: 35.9737
+  y: -1.12
+  speed: 8
 --- !u!4 &623625913 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8565409326812959874, guid: f896d9b7fb4181a438d49ced627fc7e0, type: 3}
@@ -835,7 +852,7 @@ Transform:
   m_GameObject: {fileID: 1381012334}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.9737, y: 6.88, z: 0}
+  m_LocalPosition: {x: 35.9737, y: 6.93, z: 0}
   m_LocalScale: {x: 3.880115, y: 0.8106682, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
