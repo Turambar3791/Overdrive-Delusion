@@ -13,7 +13,6 @@ public class Interaction : MonoBehaviour
 
     [Header("Npc")]
     [SerializeField] private GameObject dialogueBoxToShow;
-    [SerializeField] private TypingEffect typingEffect;
 
     private void Start()
     {

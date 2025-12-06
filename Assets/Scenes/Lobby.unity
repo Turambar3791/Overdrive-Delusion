@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 798700370}
   - component: {fileID: 798700371}
   - component: {fileID: 798700372}
-  - component: {fileID: 798700373}
+  - component: {fileID: 798700375}
   - component: {fileID: 798700374}
   m_Layer: 0
   m_Name: Npc
@@ -891,23 +891,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.713183, y: 0.26575536}
   m_EdgeRadius: 0
---- !u!114 &798700373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798700369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1448e8a9d5de4774c99713bccefa3f8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Transition
-  interactWith: npc
-  sceneName: 
-  whichLevelCompleted: 0
-  dialogueBoxToShow: {fileID: 21286230}
-  typingEffect: {fileID: 21286234}
 --- !u!114 &798700374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,6 +906,23 @@ MonoBehaviour:
   x: -14.51173
   y: -2.079289
   whichLevelCompleted: 1
+--- !u!114 &798700375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798700369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09d0db233de5564dbe7e49caa82e193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction
+  interactWith: npc
+  sceneName: 
+  whichLevelCompleted: 0
+  dialogueBoxToShow: {fileID: 21286230}
+  typingEffect: {fileID: 0}
 --- !u!1 &1034171900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1038,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2874979587278355784, guid: f649b3619c21e714f997350358082d43, type: 3}
+      propertyPath: sceneName
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3094352312453951960, guid: f649b3619c21e714f997350358082d43, type: 3}
       propertyPath: sceneName
       value: Level2
       objectReference: {fileID: 0}
@@ -1387,6 +1391,10 @@ PrefabInstance:
       propertyPath: sceneName
       value: Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 3094352312453951960, guid: f649b3619c21e714f997350358082d43, type: 3}
+      propertyPath: sceneName
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 4906366543493698185, guid: f649b3619c21e714f997350358082d43, type: 3}
       propertyPath: m_Name
       value: Portal (2)
@@ -1556,6 +1564,10 @@ PrefabInstance:
       value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 2874979587278355784, guid: f649b3619c21e714f997350358082d43, type: 3}
+      propertyPath: sceneName
+      value: Level1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3094352312453951960, guid: f649b3619c21e714f997350358082d43, type: 3}
       propertyPath: sceneName
       value: Level1
       objectReference: {fileID: 0}
