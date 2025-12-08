@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpHight = 12;
     [SerializeField] private float jumpTime = 0.5f;
     private float jumpTimeCounter;
+    private int maxJumps = 2;
+    private int remainingJumps;
 
     // czas kojota
     [Header("Czas kojota")]
@@ -117,24 +119,7 @@ public class Player : MonoBehaviour
         else
         {
             coyoteTimeCounter = coyoteTime;
-        }
-
-        // skakanie
-        if (jumpKey)
-        {
-            jumpTimeCounter = jumpTime;
-        }
-
-        if (jumpTimeCounter > 0)
-        {
-            jumpTimeCounter -= Time.deltaTime;
-
-            if (coyoteTimeCounter > 0f || IsGrounded())
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHight * Time.deltaTime);
-                jumpKey = false;
-                jumpTimeCounter = 0;
-            }
+            remainingJumps = maxJumps;
         }
 
         // zeœlizgiwanie siê ze œcian
@@ -164,6 +149,30 @@ public class Player : MonoBehaviour
             jumpKey = false;
         }
 
+        // skakanie
+        if (jumpKey)
+        {
+            jumpTimeCounter = jumpTime;
+        }
+
+        if (jumpTimeCounter > 0)
+        {
+            jumpTimeCounter -= Time.deltaTime;
+
+            if (coyoteTimeCounter > 0f || IsGrounded())
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHight * Time.deltaTime);
+                remainingJumps = maxJumps - 1;
+                jumpTimeCounter = 0;
+            }
+            else if (remainingJumps > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHight * Time.deltaTime);
+                remainingJumps--;
+            }
+
+            jumpKey = false;
+        }
 
         // dash
         if (dashKey && dashCooldownCounter <= 0)
