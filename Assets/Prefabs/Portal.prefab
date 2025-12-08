@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5930980136610438766}
   - component: {fileID: 5126969353090182337}
   - component: {fileID: 6033970178317611167}
-  - component: {fileID: 2874979587278355784}
+  - component: {fileID: 3094352312453951960}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -138,7 +138,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2874979587278355784
+--- !u!114 &3094352312453951960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,8 +147,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4906366543493698185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1448e8a9d5de4774c99713bccefa3f8f, type: 3}
+  m_Script: {fileID: 11500000, guid: d09d0db233de5564dbe7e49caa82e193, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Transition
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction
   interactWith: door
   sceneName: 
+  whichLevelCompleted: 0
+  dialogueBoxToShow: {fileID: 0}
+  typingEffect: {fileID: 0}

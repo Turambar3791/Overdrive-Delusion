@@ -13,7 +13,7 @@ public class Interaction : MonoBehaviour
 
     [Header("Npc")]
     [SerializeField] private GameObject dialogueBoxToShow;
-    [SerializeField] private TypingEffect typingEffect;
+    [SerializeField] private GameObject dialogueAboutDoubleJump;
 
     private void Start()
     {
@@ -46,7 +46,14 @@ public class Interaction : MonoBehaviour
             }
             else if (interactWith == "npc")
             {
-                dialogueBoxToShow.SetActive(true);
+                if (!SaveLoadSystem.Instance.data.is2ndLevelCompleted)
+                {
+                    dialogueBoxToShow.SetActive(true);
+                }
+                else
+                {
+                    dialogueAboutDoubleJump.SetActive(true);
+                }
             }           
 
         }

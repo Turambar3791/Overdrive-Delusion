@@ -13,7 +13,14 @@ public class MainMenu : MonoBehaviour
     public void BtnLoadGame()
     {
         SaveLoadSystem.Instance.LoadGame();
-        SceneManager.LoadScene("Lobby");
+        if (!SaveLoadSystem.Instance.data.is3rdLevelCompleted)
+        {
+            SceneManager.LoadScene("Lobby");
+        } 
+        else
+        {
+            SceneManager.LoadScene("TheEnd");
+        }
     }
 
     public void BtnKeybinds()
