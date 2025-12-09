@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpHight = 12;
     [SerializeField] private float jumpTime = 0.5f;
     private float jumpTimeCounter;
+    private int maxJumps = 2;
+    private int remainingJumps;
 
     // czas kojota
     [Header("Czas kojota")]
@@ -77,7 +79,7 @@ public class Player : MonoBehaviour
         }
 
         // naciskanie klawiszy
-        if (Input.GetKeyDown(KeyCode.C)) 
+        if (Input.GetKeyDown(KeyCode.C) && (IsGrounded() || coyoteTimeCounter > 0f || remainingJumps > 0)) 
         {
             jumpKey = true;
         }
@@ -117,6 +119,42 @@ public class Player : MonoBehaviour
         else
         {
             coyoteTimeCounter = coyoteTime;
+            remainingJumps = maxJumps;
+        }
+
+        // wallJump
+        if (jumpKey)
+        {
+            if (IsTouchingWallOnTheLeft())
+            {
+                rb.gravityScale = 10;
+                rb.linearVelocity = new Vector2(1, 1) * jumpHight * Time.deltaTime;
+                remainingJumps = maxJumps - 1;
+                jumpKey = false;
+                return;
+            }
+
+            if (IsTouchingWallOnTheRight())
+            {
+                rb.gravityScale = 10;
+                rb.linearVelocity = new Vector2(-1, 1) * jumpHight * Time.deltaTime;
+                remainingJumps = maxJumps - 1;
+                jumpKey = false;
+                return;
+            }
+        }
+
+        // zeœlizgiwanie siê ze œcian
+        if (IsTouchingWallOnTheLeft() || IsTouchingWallOnTheRight())
+        {
+            jumpTimeCounter = 0;
+            rb.gravityScale = 6;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+            remainingJumps += 1;
+        }
+        else
+        {
+            rb.gravityScale = 10;
         }
 
         // skakanie
@@ -132,38 +170,17 @@ public class Player : MonoBehaviour
             if (coyoteTimeCounter > 0f || IsGrounded())
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHight * Time.deltaTime);
-                jumpKey = false;
+                remainingJumps = maxJumps - 1;
                 jumpTimeCounter = 0;
             }
-        }
+            else if (remainingJumps > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHight * Time.deltaTime);
+                remainingJumps--;
+            }
 
-        // zeœlizgiwanie siê ze œcian
-        if (IsTouchingWallOnTheLeft() || IsTouchingWallOnTheRight())
-        {
-            jumpTimeCounter = 0;
-            rb.gravityScale = 6;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
-        }
-        else
-        {
-            rb.gravityScale = 10;
-        }
-
-        // wallJump
-        if (IsTouchingWallOnTheLeft() && jumpKey)
-        {
-            rb.gravityScale = 10;
-            rb.linearVelocity = new Vector2(1, 1) * jumpHight * Time.deltaTime;
             jumpKey = false;
         }
-
-        if (IsTouchingWallOnTheRight() && jumpKey)
-        {
-            rb.gravityScale = 10;
-            rb.linearVelocity = new Vector2(-1, 1) * jumpHight * Time.deltaTime;
-            jumpKey = false;
-        }
-
 
         // dash
         if (dashKey && dashCooldownCounter <= 0)
