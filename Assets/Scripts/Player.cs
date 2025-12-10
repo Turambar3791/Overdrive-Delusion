@@ -61,6 +61,15 @@ public class Player : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         pauseScreen.enabled = false;
         Time.timeScale = 1;
+
+        if (SaveLoadSystem.Instance.data.is2ndLevelCompleted)
+        {
+            maxJumps = 2;
+        }
+        else
+        {
+            maxJumps = 1;
+        }
     }
 
     private void Update()
@@ -150,6 +159,7 @@ public class Player : MonoBehaviour
             jumpTimeCounter = 0;
             rb.gravityScale = 6;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+            remainingJumps += 1;
         }
         else
         {
