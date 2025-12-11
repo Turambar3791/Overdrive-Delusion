@@ -50,7 +50,6 @@ public class Player : MonoBehaviour
     private bool isPaused = false;
     [SerializeField] private Canvas pauseScreen;
 
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
