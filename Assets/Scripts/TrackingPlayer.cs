@@ -9,6 +9,7 @@ public class TrackingPlayer : MonoBehaviour
 
     void Start()
     {
+        positions.Clear();
         lastPos = transform.position;
         positions.Enqueue(lastPos);
     }
