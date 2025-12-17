@@ -4,23 +4,9 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // MainMenu
-    public void BtnNewGame()
+    public void BtnStart()
     {
-        SceneManager.LoadScene("Lobby");
-        SaveLoadSystem.Instance.NewGame();
-    }
-
-    public void BtnLoadGame()
-    {
-        SaveLoadSystem.Instance.LoadGame();
-        if (!SaveLoadSystem.Instance.data.is3rdLevelCompleted)
-        {
-            SceneManager.LoadScene("Lobby");
-        } 
-        else
-        {
-            SceneManager.LoadScene("TheEnd");
-        }
+        SceneManager.LoadScene("MenuLoadGame");
     }
 
     public void BtnKeybinds()
