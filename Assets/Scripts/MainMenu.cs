@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
     {
         SaveLoadSystem.Instance.SetSlot(slot);
         SaveLoadSystem.Instance.NewGame();
+        SaveLoadSystem.Instance.data.isGameStarted = true;
         SaveLoadSystem.Instance.SaveGame();
         SceneManager.LoadScene("Lobby");
     }

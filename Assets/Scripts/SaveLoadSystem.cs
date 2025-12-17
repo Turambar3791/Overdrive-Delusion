@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
+    public bool isGameStarted = false;
     public bool is1stLevelCompeleted = false;
     public bool is2ndLevelCompleted = false;
     public bool is3rdLevelCompleted = false;

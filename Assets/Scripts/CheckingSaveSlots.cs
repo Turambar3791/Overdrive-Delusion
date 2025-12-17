@@ -12,7 +12,7 @@ public class CheckingSaveSlots : MonoBehaviour
             int slot = i + 1;
             SaveLoadSystem.Instance.SetSlot(slot);
             SaveLoadSystem.Instance.LoadGame();
-            buttons[i].interactable = (SaveLoadSystem.Instance.data.is1stLevelCompeleted);
+            buttons[i].interactable = (SaveLoadSystem.Instance.data.isGameStarted);
         }
     }
 }
