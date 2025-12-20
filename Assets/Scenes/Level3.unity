@@ -540,7 +540,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3094352312453951960, guid: f649b3619c21e714f997350358082d43, type: 3}
       propertyPath: sceneName
-      value: TheEnd
+      value: Autosave
       objectReference: {fileID: 0}
     - target: {fileID: 3094352312453951960, guid: f649b3619c21e714f997350358082d43, type: 3}
       propertyPath: whichLevelCompleted
