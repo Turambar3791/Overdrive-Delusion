@@ -37,6 +37,13 @@ public class MainMenu : MonoBehaviour
     {
         SaveLoadSystem.Instance.SetSlot(slot);
         SaveLoadSystem.Instance.LoadGame();
-        SceneManager.LoadScene("Lobby");
+        if (SaveLoadSystem.Instance.data.is3rdLevelCompleted)
+        {
+            SceneManager.LoadScene("TheEnd");
+        }
+        else
+        {
+            SceneManager.LoadScene("Lobby");
+        } 
     }
 }
