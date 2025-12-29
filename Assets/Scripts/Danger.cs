@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Danger : MonoBehaviour
 {
+    [Header("Player")]
     [SerializeField] private float x;
     [SerializeField] private float y;
     private BoxCollider2D boxCollider;

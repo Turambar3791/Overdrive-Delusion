@@ -154,4 +154,4 @@ MonoBehaviour:
   sceneName: 
   whichLevelCompleted: 0
   dialogueBoxToShow: {fileID: 0}
-  typingEffect: {fileID: 0}
+  dialogueAboutDoubleJump: {fileID: 0}
